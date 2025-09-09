@@ -1,10 +1,10 @@
 function App() {
   return (
     <>
-      <div>
-        <h5 className="w-full text-3xl font-bold underline justify-center bg-amber-600 align-middle">
+      <div className="h-screen w-screen bg-hero">
+        <h2 className=" text-3xl font-bold underline ">
           This is the the portfolio website for Nisha
-        </h5>
+        </h2>
       </div>
     </>
   );
