@@ -6,3 +6,34 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+/* Loading */
+
+.loading-container {
+  position: absolute;
+  z-index: 10000;
+  width: 100vw;
+  height: 100vh;
+  background: #ffdefb;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 222, 251, 1) 0%,
+    rgba(247, 247, 247, 1) 55%,
+    rgba(255, 222, 251, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading-span {
+  display: inline-block;
+  transform-origin: 0% 70%;
+  transform-style: preserve-3d;
+  color: #3e1e68;
+  font-size: 2rem;
+  animation: loading-animation 2.6s infinite;
+}
+
+.loading-span:nth-child(even) {
+  color: red;
+}
