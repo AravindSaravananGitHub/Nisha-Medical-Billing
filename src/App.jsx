@@ -5,9 +5,9 @@ function App() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoading(true);
+      setIsLoading(false);
       return () => clearTimeout(timer);
-    }, 4000);
+    }, 5000);
   }, []);
 
   return (
@@ -15,18 +15,43 @@ function App() {
       {isLoading ? (
         <div className="loading-container">
           <div className="loader">
-            <span className="loading-span">
-              <h4>
-                <b>Loading...</b>
-              </h4>
-            </span>
+            <div className="loading-span">
+              <span>
+                <b>L</b>
+              </span>
+              <span>
+                <b>o</b>
+              </span>
+              <span>
+                <b>a</b>
+              </span>
+              <span>
+                <b>d</b>
+              </span>
+              <span>
+                <b>i</b>
+              </span>
+              <span>
+                <b>n</b>
+              </span>
+              <span>
+                <b>g</b>
+              </span>
+              <span>
+                <b>.</b>
+              </span>
+              <span>
+                <b>.</b>
+              </span>
+              <span>
+                <b>.</b>
+              </span>
+            </div>
           </div>
         </div>
       ) : (
         <div className="h-screen w-screen bg-hero">
-          <h2 className=" text-3xl font-bold underline ">
-            This is the the portfolio website for Nisha
-          </h2>
+          <h2 className=" text-3xl font-bold underline ">Under Construction</h2>
         </div>
       )}
     </>
