@@ -9,7 +9,7 @@ function App() {
     const timer = setTimeout(() => {
       setIsLoading(false);
       return () => clearTimeout(timer);
-    }, 5000);
+    }, 9000);
   }, []);
 
   return (

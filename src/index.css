@@ -1,10 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --color1: #3e1e68;
+  /* --color1: #3e1e68;
   --color2: #5d2f77;
   --color3: #e45a92;
   --color4: #ffacac;
+  --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); */
+  --color1: #ff204e;
+  --color2: #a0153e;
+  --color3: #5d0e41;
+  --color4: #00224d;
   --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
@@ -16,15 +21,17 @@
   font-optical-sizing: auto;
 }
 
-html,
 body {
-  height: 100%;
-  font-family: sans-serif;
-}
-
-.bg-hero {
-  background-image: url(/src/assets/AdvBG1.png);
+  /* height: 100%;
+  font-family: sans-serif; */
+  margin: 0;
+  padding: 0;
+  background-image: url("././assets/BG3.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  font-family: sans-serif;
 }

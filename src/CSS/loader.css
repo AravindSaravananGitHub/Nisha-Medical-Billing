@@ -5,12 +5,12 @@
   z-index: 10000;
   width: 100vw;
   height: 100vh;
-  background: #ffdefb;
+  background: #ffdede;
   background: linear-gradient(
     90deg,
-    rgba(255, 222, 251, 1) 0%,
+    rgba(255, 222, 222, 1) 0%,
     rgba(247, 247, 247, 1) 55%,
-    rgba(255, 222, 251, 1) 100%
+    rgba(255, 222, 222, 1) 100%
   );
   display: flex;
   justify-content: center;
@@ -32,6 +32,7 @@
   font-size: 1.5rem;
   animation: loading-animation 2.6s infinite linear;
 }
+
 @keyframes loading-animation {
   35% {
     transform: rotateZ(360deg);
@@ -71,6 +72,33 @@
 }
 .loading-span span:nth-child(10) {
   animation-delay: 0.9s;
+}
+.loading-span span:nth-child(11) {
+  animation-delay: 0.1s;
+}
+.loading-span span:nth-child(12) {
+  animation-delay: 0.11s;
+}
+.loading-span span:nth-child(13) {
+  animation-delay: 0.12s;
+}
+.loading-span span:nth-child(14) {
+  animation-delay: 0.13s;
+}
+.loading-span span:nth-child(15) {
+  animation-delay: 0.14s;
+}
+.loading-span span:nth-child(16) {
+  animation-delay: 0.15s;
+}
+.loading-span span:nth-child(17) {
+  animation-delay: 0.16s;
+}
+.loading-span span:nth-child(18) {
+  animation-delay: 0.17s;
+}
+.loading-span span:nth-child(19) {
+  animation-delay: 0.18s;
 }
 
 span:nth-child(even) {
