@@ -6,10 +6,10 @@
   --color3: #e45a92;
   --color4: #ffacac;
   --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); */
-  --color1: #ff204e;
-  --color2: #a0153e;
-  --color3: #5d0e41;
-  --color4: #00224d;
+  --color1: #e45a92;
+  --color2: #5d2f77;
+  --color3: #3e1e68;
+  --color4: #ffacac;
   --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
@@ -31,6 +31,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  image-rendering: pixelated;
   height: 100vh;
   width: 100%;
   font-family: sans-serif;
