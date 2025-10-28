@@ -5,11 +5,21 @@
   --color2: #5d2f77;
   --color3: #e45a92;
   --color4: #ffacac;
-  --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); */
+  --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
   --color1: #e45a92;
   --color2: #5d2f77;
   --color3: #3e1e68;
   --color4: #ffacac;
+  --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  */
+  --color1: #df4671;
+  --color2: #3e1e68;
+  --color3: #15496a;
+  --color4: #ffacac;
+  --darkColor: #fa2a59;
+  --red: #a31621;
+  --snow: #fcf7f8;
+  --black: #121212;
   --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 

@@ -1,1 +1,24 @@
 /* Nav Bar */
+@import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");
+
+.nav-logo h3,
+span {
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.nav-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 8px;
+}
+.nav-content {
+  grid-column: span 3 / span 3;
+  grid-column-start: 2;
+}
+.nav-logo {
+  grid-column: span 5 / span 5;
+  grid-column-start: 5;
+}
