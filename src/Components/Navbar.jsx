@@ -5,8 +5,8 @@ import CallIcon from "@mui/icons-material/Call";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 const Navbar = () => {
-  const navItems = ["About", "Experience", "Projects", "Contacts"];
-  const [activeItem, setActiveItem] = useState("About");
+  const navItems = ["About", "Experience", "Projects", "Contact"];
+  const [activeItem, setActiveItem] = useState("");
 
   return (
     <div className="nav-container">
@@ -16,9 +16,13 @@ const Navbar = () => {
             <li
               key={itemPosition}
               className={activeItem === item ? "active" : ""}
-              onClick={() => setActiveItem(item)}
             >
-              <a href="#">{item}</a>
+              <a
+                href={`#${item.toLowerCase()}`}
+                onClick={() => setActiveItem(item)}
+              >
+                {item}
+              </a>
             </li>
           ))}
         </ul>
@@ -27,8 +31,8 @@ const Navbar = () => {
       <div className="nav-logo">
         <h3>
           <a href="#">
-            <span>NISHA </span>
-            <span>RAVIKUMAR</span>
+            <span className="name-logo1">NISHA </span>
+            <span className="name-logo2">RAVIKUMAR</span>
           </a>
         </h3>
       </div>
