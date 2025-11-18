@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../CSS/navbar.css";
 import MarkunreadIcon from "@mui/icons-material/Markunread";
 import CallIcon from "@mui/icons-material/Call";
@@ -6,7 +6,16 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 const Navbar = () => {
   const navItems = ["About", "Experience", "Projects", "Contact"];
-  const [activeItem, setActiveItem] = useState("");
+  const [activeItem, setActiveItem] = useState("About");
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % 3); // cycles 0 → 1 → 2 → 0
+    }, 2000); // 2 seconds interval
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="nav-container">
@@ -16,13 +25,9 @@ const Navbar = () => {
             <li
               key={itemPosition}
               className={activeItem === item ? "active" : ""}
+              onClick={() => setActiveItem(item)}
             >
-              <a
-                href={`#${item.toLowerCase()}`}
-                onClick={() => setActiveItem(item)}
-              >
-                {item}
-              </a>
+              <a href={`#${item.toLowerCase()}`}>{item}</a>
             </li>
           ))}
         </ul>
@@ -39,17 +44,17 @@ const Navbar = () => {
 
       <div className="nav-contacts">
         <ul>
-          <li>
+          <li className={activeIndex === 0 ? "active" : ""}>
             <a href="#">
               <MarkunreadIcon />
             </a>
           </li>
-          <li>
+          <li className={activeIndex === 1 ? "active" : ""}>
             <a href="#">
               <CallIcon />
             </a>
           </li>
-          <li>
+          <li className={activeIndex === 2 ? "active" : ""}>
             <a href="#">
               <WhatsAppIcon />
             </a>
