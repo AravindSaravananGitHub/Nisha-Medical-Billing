@@ -87,7 +87,7 @@ span {
 .nav-logo h3 a {
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.9rem;
 }
 .nav-logo h3 a span {
   text-shadow: var(--text-shadow);
@@ -131,7 +131,7 @@ span {
 
 .nav-contacts ul li a {
   text-decoration: none;
-  color: -var(color2);
+  color: var(--color2);
   cursor: pointer;
 }
 .nav-contacts svg {
@@ -151,4 +151,49 @@ span {
 }
 .nav-contacts ul .active a svg {
   transform: scale(1.1);
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .nav-content {
+    display: none;
+  }
+  .nav-contacts {
+    display: none;
+  }
+  .nav-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 8px;
+  }
+  .nav-logo {
+    grid-column: span 5 / span 5;
+    place-items: center;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .nav-content {
+    display: none;
+  }
+  .nav-contacts {
+    display: none;
+  }
+  .nav-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 8px;
+  }
+  .nav-logo {
+    grid-column: span 5 / span 5;
+    place-items: center;
+  }
+
+  /* Logo */
+  .nav-logo h3 a {
+    font-size: 2rem;
+  }
 }

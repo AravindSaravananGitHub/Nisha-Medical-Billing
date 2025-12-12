@@ -44,17 +44,17 @@ const Navbar = () => {
       <div className="nav-contacts">
         <ul>
           <li className={activeIndex === 0 ? "active" : ""}>
-            <a href="#">
+            <a href="mailto:nisharavikumar006@gmail.com">
               <MarkunreadIcon />
             </a>
           </li>
           <li className={activeIndex === 1 ? "active" : ""}>
-            <a href="#">
+            <a href="tel:+916383435928">
               <CallIcon />
             </a>
           </li>
           <li className={activeIndex === 2 ? "active" : ""}>
-            <a href="#">
+            <a href="tel:+916383435928">
               <WhatsAppIcon />
             </a>
           </li>
