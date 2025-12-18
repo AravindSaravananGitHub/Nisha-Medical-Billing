@@ -73,6 +73,7 @@ span {
 .nav-menu .active {
   background-color: var(--darkColor);
   border-radius: 12px;
+  background: #fa2a59;
 }
 
 .nav-menu .active a {
@@ -174,6 +175,10 @@ span {
   }
   .nav-logo h3 a {
     font-size: 1.8rem;
+    text-align: center;
+  }
+  .nav-logo h3 {
+    text-align: center;
   }
 }
 
@@ -199,5 +204,9 @@ span {
   /* Logo */
   .nav-logo h3 a {
     font-size: 2.1rem;
+    text-align: center;
+  }
+  .nav-logo h3 {
+    text-align: center;
   }
 }
