@@ -9,6 +9,8 @@ const MobilMenu = () => {
 
   const menus = ["Home", "About", "Experience", "Projects", "Contact"];
 
+  const mobileMenuItems = document.querySelectorAll(".menu-list li");
+
   // Open Menu
   const openMenu = () => {
     setOpen(true);
@@ -48,6 +50,26 @@ const MobilMenu = () => {
     document.addEventListener("mousedown", handleOutSideClick);
     return () => document.removeEventListener("mousedown", handleOutSideClick);
   }, [open]);
+
+  // Hover effect for anchor
+  mobileMenuItems.forEach((item) => {
+    const link = item.querySelector("a");
+
+    item.addEventListener("mouseenter", () => {
+      gsap.to(link, {
+        scale: 1.3,
+        duration: 0.25,
+        ease: "back.out(2)",
+      });
+    });
+    item.addEventListener("mouseleave", () => {
+      gsap.to(link, {
+        scale: 1,
+        duration: 0.2,
+        ease: "power2.out",
+      });
+    });
+  });
 
   return (
     <div className="burger-wrap">

@@ -1,0 +1,33 @@
+.home-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.image-part {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  max-width: 650px;
+  overflow: hidden;
+}
+
+.home-image {
+  width: 700px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 100% 100% 100px 100px;
+  object-fit: cover;
+  filter: drop-shadow(var(--text-shadow));
+}
+
+@media (max-width: 768px) {
+  .home-image {
+    width: 90%;
+  }
+}

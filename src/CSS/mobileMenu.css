@@ -10,13 +10,21 @@
 .burger-container {
   width: 56px;
   height: 56px;
-  background-color: var(--darkColor);
+
+  /* background-color: var(--darkColor);
   background: #fa2a59;
   background: linear-gradient(
     116deg,
     rgba(250, 42, 89, 1) 34%,
     rgba(21, 73, 106, 1) 100%
+  ); */
+  background: #fa2a59;
+  background: linear-gradient(
+    116deg,
+    rgba(250, 42, 89, 1) 64%,
+    rgba(252, 247, 248, 1) 100%
   );
+
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -57,10 +65,25 @@
   width: 100%;
   height: 100%;
   text-align: center;
-
+  font-size: 1rem;
   text-shadow: var(--text-shadow);
+  transition: transform 0.25s ease;
 }
 
 .menu-list li:last-child {
   border: none;
+}
+
+.menu-list li :hover {
+  transform: scale(1.2);
+}
+
+.menu-list li :active {
+  transform: scale(1.2);
+}
+
+@media (min-width: 1023px) {
+  .burger-wrap {
+    display: none;
+  }
 }
