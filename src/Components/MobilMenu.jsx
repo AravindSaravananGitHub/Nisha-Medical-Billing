@@ -84,7 +84,7 @@ const MobilMenu = () => {
           <ul className="menu-list">
             {menus.map((item, index) => (
               <li key={index}>
-                <a href={`#${item.toLowerCase}`} onClick={closeMenu}>
+                <a href={`#${item.toLowerCase()}`} onClick={closeMenu}>
                   {item}
                 </a>
               </li>

@@ -34,7 +34,7 @@ const Navbar = () => {
 
       <div className="nav-logo">
         <h3>
-          <a href="#">
+          <a href="#home">
             <span className="name-logo1">NISHA </span>
             <span className="name-logo2">RAVIKUMAR</span>
           </a>
