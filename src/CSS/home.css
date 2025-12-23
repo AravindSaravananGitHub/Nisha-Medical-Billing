@@ -36,41 +36,75 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
   gap: 0.5rem;
 }
+.home-para p {
+  text-align: justify;
+  line-height: 2rem;
+}
+.home-para-name {
+  color: var(--color3);
+  font-size: 1.5rem;
+}
+.home-exp {
+  color: var(--darkColor);
+  font-size: 1.3rem;
+}
+
+/* Home Button */
 
 .home-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1.2rem;
+  margin-top: 1rem;
 }
 
-.home-buttons button {
+.btn-Resume,
+.btn-contact {
   width: 160px;
-  padding: 0.6rem;
-  border-radius: 10px;
+  height: 50px;
+  border-radius: 15px;
   border: none;
   box-shadow: var(--text-shadow);
   transition: all 0.8s ease;
 }
-.home-buttons button:active {
-  box-shadow: none;
-}
-.home-buttons button a:hover {
-  transform: scale(1.5);
-}
+
 .btn-Resume {
   background-color: var(--darkColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 .btn-contact {
   background-color: var(--color3);
-}
-.btn-Resume a,
-.btn-contact a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
+}
+
+.btn-Resume button,
+.btn-contact button {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  border: none;
   font-weight: bold;
   color: var(--snow);
+  font-size: 0.9rem;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  padding: 0.6rem;
+}
+
+.btn-Resume :hover,
+.btn-contact :hover {
+  transform: scale(1.09);
 }
 
 /* Mobile */

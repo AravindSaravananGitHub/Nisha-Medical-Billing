@@ -17,23 +17,24 @@ const Home = () => {
             <p>
               Hi, I’m{" "}
               <b>
-                <span>Nisha Ravikumar</span>
+                <span className="home-para-name">Nisha Ravikumar</span>
               </b>
             </p>
             <p>
-              An experienced Account Receivable Caller with <span>2.5+</span>
+              An experienced Account Receivable Caller with{" "}
+              <span className="home-exp">2.5+ </span>
               years in medical billing and RCM, focused on resolving denied
               claims and improving reimbursement outcomes, helping healthcare
               providers unpaid and denied claims into successful payments.
             </p>
           </div>
           <div className="home-buttons">
-            <button className="btn-Resume">
-              <a href="#">Download Resume</a>
-            </button>
-            <button className="btn-contact">
-              <a href="#">Contact</a>
-            </button>
+            <a href="#" className="btn-Resume">
+              <button>Download Resume</button>
+            </a>
+            <a href="#" className="btn-contact">
+              <button>Contact</button>
+            </a>
           </div>
         </div>
       </div>
