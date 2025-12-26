@@ -8,12 +8,22 @@ const Navbar = () => {
   const navItems = ["About", "Experience", "Projects", "Contact"];
   const [activeItem, setActiveItem] = useState("About");
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isGlass, setIsGlass] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % 3);
     }, 3500);
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setIsGlass(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
@@ -32,9 +42,9 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div className="nav-logo">
+      <div className="nav-logo ">
         <h3>
-          <a href="#home">
+          <a href="#home" className={`${isGlass ? "sticky" : ""}`}>
             <span className="name-logo1">NISHA </span>
             <span className="name-logo2">RAVIKUMAR</span>
           </a>

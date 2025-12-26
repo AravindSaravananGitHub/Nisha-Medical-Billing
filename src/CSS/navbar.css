@@ -82,11 +82,18 @@ span {
 }
 
 /* Logo style */
-
-.nav-logo {
-  margin: 0 0.7rem;
+.sticky {
+  background: rgba(255, 255, 255, 0.15); /* Transparent white */
+  backdrop-filter: blur(10px); /* Glass blur */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for glass edge */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
 }
+
 .nav-logo h3 a {
+  padding: 0.2rem 0.7rem;
   text-decoration: none;
   font-weight: 600;
   font-size: 1.9rem;
@@ -181,6 +188,15 @@ span {
   .nav-logo h3 {
     text-align: center;
   }
+  .sticky {
+    background: rgba(255, 255, 255, 0.15); /* Transparent white */
+    backdrop-filter: blur(10px); /* Glass blur */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for glass edge */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  }
 }
 
 /* Tablet */
@@ -203,6 +219,15 @@ span {
   }
 
   /* Logo */
+  .sticky {
+    background: rgba(255, 255, 255, 0.15); /* Transparent white */
+    backdrop-filter: blur(10px); /* Glass blur */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for glass edge */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  }
   .nav-logo h3 a {
     font-size: 2.1rem;
     text-align: center;
