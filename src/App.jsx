@@ -3,6 +3,7 @@ import Loader from "./Components/Loader";
 import Navbar from "./Components/Navbar";
 import MobilMenu from "./Components/MobilMenu";
 import Home from "./Components/Home";
+import About from "./Components/About";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -23,6 +24,7 @@ function App() {
           <Navbar />
           <MobilMenu />
           <Home />
+          <About />
         </div>
       )}
     </>

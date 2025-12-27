@@ -142,6 +142,7 @@ span {
   text-decoration: none;
   color: var(--color2);
   cursor: pointer;
+  text-align: center;
 }
 .nav-contacts svg {
   width: 25px;
