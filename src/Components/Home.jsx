@@ -58,7 +58,7 @@ const Home = () => {
         snap: { innerText: 1 },
         scrollTrigger: {
           trigger: claimRef.current,
-          start: "top 90%",
+          start: "top 95%",
           once: true,
         },
         onUpdate: function () {
@@ -73,12 +73,12 @@ const Home = () => {
       { innerText: 0 },
       {
         innerText: 2,
-        duration: 5,
+        duration: 3,
         ease: "power3.out",
         snap: { innerText: 1 },
         scrollTrigger: {
           trigger: organizationsRef.current,
-          start: "top 90%",
+          start: "top 95%",
           once: true,
         },
         onUpdate: function () {
@@ -92,12 +92,12 @@ const Home = () => {
       { innerText: 0 },
       {
         innerText: 4,
-        duration: 5,
+        duration: 3,
         ease: "power3.out",
         snap: { innerText: 1 },
         scrollTrigger: {
           trigger: softwareRef.current,
-          start: "top 90%",
+          start: "top 95%",
           once: true,
         },
         onUpdate: function () {
@@ -111,12 +111,12 @@ const Home = () => {
       { innerText: 0 },
       {
         innerText: 100,
-        duration: 5,
+        duration: 3,
         ease: "power3.out",
         snap: { innerText: 1 },
         scrollTrigger: {
           trigger: findingsRef.current,
-          start: "top 90%",
+          start: "top 95%",
           once: true,
         },
         onUpdate: function () {

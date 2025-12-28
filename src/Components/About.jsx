@@ -1,13 +1,81 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "../CSS/about.css";
-import image1 from "../assets/image4.jpeg";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import AttachEmailIcon from "@mui/icons-material/AttachEmail";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+import image1 from "../assets/image1.jpeg";
+import image2 from "../assets/image2.jpeg";
+import image3 from "../assets/image3.jpeg";
+import image4 from "../assets/image4.jpeg";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const images = [image1, image2, image3, image4];
 
 const About = () => {
+  const stackRef = useRef(null);
+  const cardsRef = useRef([]);
+
+  useEffect(() => {
+    const cards = cardsRef.current;
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: stackRef.current,
+        start: "top 70%",
+        end: "top 30%",
+        scrub: true,
+      },
+    });
+
+    cards.forEach((card, i) => {
+      tl.fromTo(
+        card,
+        {
+          y: 120,
+          scale: 0.9,
+        },
+        {
+          y: 0,
+          scale: 1,
+          duration: 1,
+          ease: "power3.out",
+        },
+        i * 0.2
+      );
+    });
+
+    cards.forEach((card, index) => {
+      card.addEventListener("click", () => bringToFront(index));
+
+      function bringToFront(clickedIndex) {
+        const ordered = [...cards];
+        const clicked = ordered.splice(clickedIndex, 1)[0];
+        ordered.push(clicked);
+
+        const tl = gsap.timeline();
+
+        ordered.forEach((card, i) => {
+          tl.to(card, {
+            zIndex: i + 1,
+            duration: 0.6,
+            ease: "power3.inOut",
+            transform: stackTransforms[i],
+            onComplete: () => {
+              card.style.zIndex = i + 1;
+            },
+          });
+        });
+        cardsRef.current = ordered;
+      }
+    });
+    return () => ScrollTrigger.killAll();
+  }, []);
+
   return (
     <div className="about-main" id="about">
       <div className="about-container">
@@ -17,8 +85,17 @@ const About = () => {
         <div className="about-content">
           <div className="about-image">
             <section className="photo-section">
-              <div className="photo-stack">
-                <img src={image1} alt="Nisha image" />
+              <div className="photo-stack" ref={stackRef}>
+                {images.map((img, i) => (
+                  <img
+                    key={i}
+                    src={img}
+                    ref={(el) => (cardsRef.current[i] = el)}
+                    alt="Nisha's Photos"
+                    className="photo"
+                    style={{ zIndex: i + 1, transform: stackTransforms[i] }}
+                  />
+                ))}
               </div>
             </section>
           </div>
@@ -27,7 +104,7 @@ const About = () => {
             <section className="about-para">
               <p>
                 I am <span className="about-nisha-name">Nisha Ravikumar</span>,
-                an experienced Account Receivable Caller with over 2.5 years of
+                an experienced Account Receivable Caller with over 2.5+ years of
                 hands-on experience in US healthcare medical billing and revenue
                 cycle management. I have worked extensively on both physician
                 and hospital billing, supporting healthcare providers in
@@ -80,5 +157,13 @@ const About = () => {
     </div>
   );
 };
+
+/* ---------- STACK POSITIONS ---------- */
+const stackTransforms = [
+  "rotate(-10deg) translate(-28px, 40px)",
+  "rotate(6deg) translate(22px, 26px)",
+  "rotate(-4deg) translate(-12px, 12px)",
+  "rotate(0deg) translate(0px, 0px)",
+];
 
 export default About;
