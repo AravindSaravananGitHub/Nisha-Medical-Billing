@@ -19,8 +19,44 @@ const images = [image1, image2, image3, image4];
 const About = () => {
   const stackRef = useRef(null);
   const cardsRef = useRef([]);
+  const expRef = useRef(null);
+
+  gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
+    const joiningDate = new Date("2023-06-09");
+    const calculateExperience = () => {
+      const today = new Date();
+
+      const totalMonths =
+        (today.getFullYear() - joiningDate.getFullYear()) * 12 +
+        (today.getMonth() - joiningDate.getMonth());
+      return Number(totalMonths / 12).toFixed(1);
+    };
+    const value = calculateExperience();
+
+    gsap.fromTo(
+      expRef.current,
+      {
+        innerText: 0,
+      },
+      {
+        innerText: value,
+        duration: 1.6,
+        ease: "power3.Out",
+        snap: { innerText: 0.1 },
+        scrollTrigger: {
+          trigger: expRef.current,
+          start: "top 90%",
+          once: true,
+        },
+        onUpdate: function () {
+          expRef.current.innerText =
+            Number(expRef.current.innerText).toFixed(1) + "+ ";
+        },
+      },
+    );
+
     const cards = cardsRef.current;
 
     const tl = gsap.timeline({
@@ -45,7 +81,7 @@ const About = () => {
           duration: 1,
           ease: "power3.out",
         },
-        i * 0.2
+        i * 0.2,
       );
     });
 
@@ -104,11 +140,14 @@ const About = () => {
             <section className="about-para">
               <p>
                 I am <span className="about-nisha-name">Nisha Ravikumar</span>,
-                an experienced Account Receivable Caller with over 2.5+ years of
-                hands-on experience in US healthcare medical billing and revenue
-                cycle management. I have worked extensively on both physician
-                and hospital billing, supporting healthcare providers in
-                resolving unpaid and denied claims efficiently.
+                an experienced Account Receivable Caller with over{" "}
+                <span className="home-exp" ref={expRef}>
+                  0+{" "}
+                </span>{" "}
+                years of hands-on experience in US healthcare medical billing
+                and revenue cycle management. I have worked extensively on both
+                physician and hospital billing, supporting healthcare providers
+                in resolving unpaid and denied claims efficiently.
               </p>
               <p>
                 My expertise includes AR follow-ups, denial management, payer

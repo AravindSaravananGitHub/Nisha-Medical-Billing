@@ -45,7 +45,7 @@ const Home = () => {
           expRef.current.innerText =
             Number(expRef.current.innerText).toFixed(1) + "+ ";
         },
-      }
+      },
     );
 
     gsap.fromTo(
@@ -65,7 +65,7 @@ const Home = () => {
           claimRef.current.innerText =
             Math.round(claimRef.current.innerText) + "+";
         },
-      }
+      },
     );
 
     gsap.fromTo(
@@ -85,7 +85,7 @@ const Home = () => {
           organizationsRef.current.innerText =
             Math.round(organizationsRef.current.innerText) + "+";
         },
-      }
+      },
     );
     gsap.fromTo(
       softwareRef.current,
@@ -104,7 +104,7 @@ const Home = () => {
           softwareRef.current.innerText =
             Math.round(softwareRef.current.innerText) + "+";
         },
-      }
+      },
     );
     gsap.fromTo(
       findingsRef.current,
@@ -123,7 +123,7 @@ const Home = () => {
           findingsRef.current.innerText =
             Math.round(findingsRef.current.innerText) + "+";
         },
-      }
+      },
     );
   }, []);
 
